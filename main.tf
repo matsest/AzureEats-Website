@@ -20,6 +20,8 @@ resource "azurerm_app_service" "website" {
   resource_group_name = azurerm_resource_group.app.name
   app_service_plan_id = azurerm_app_service_plan.website.id
 
+  https_only = true
+
   app_settings = var.app_settings
 
 }
