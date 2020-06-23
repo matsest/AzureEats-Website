@@ -37,7 +37,8 @@ jobs:
               env:
                   TF_APPSERV: app_service_name=${{ secrets.WEBAPP_APPSERVICE_NAME }}
                   TF_SQLPW: sql_adm_password=${{ secrets.SQL_ADM_PASSWORD }}
-              run: terraform plan -var $TF_APPSERV -var $TF_SQLPW -input=false -out tfplan
+                  TF_MDBPW: mongodb_adm_password=${{ secrets.MONGODB_ADM_PASSWORD }}
+              run: terraform plan -var $TF_APPSERV -var $TF_SQLPW -var $TF_MDBPW -input=false -out tfplan
 
             - name: Terraform Apply
               run: terraform apply -auto-approve tfplan

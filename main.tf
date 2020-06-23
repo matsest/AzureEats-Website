@@ -26,7 +26,7 @@ resource "azurerm_app_service" "website" {
     "WEBSITE_NODE_DEFAULT_VERSION" = "10.15.2",
     "ApiUrl"                       = "/api/v1",
     "ApiUrlShoppingCart"           = "/api/v1",
-    "MongoConnectionString"        = format("mongodb://%s:27017", azurerm_container_group.app.ip_address)
+    "MongoConnectionString"        = format("mongodb://%s:%s@%s:%s", var.mongodb_adm_username, var.mongodb_adm_password, azurerm_container_group.app.ip_address, var.mongodb_port)
     "SqlConnectionString"          = module.sql_database.connection_string
     "productImagesUrl"             = "https://raw.githubusercontent.com/microsoft/TailwindTraders-Backend/master/Deploy/tailwindtraders-images/product-detail",
     "Personalizer__ApiKey"         = "",
@@ -59,8 +59,13 @@ resource "azurerm_container_group" "app" {
     memory = "1.5"
 
     ports {
-      port     = 27017
+      port     = var.mongodb_port
       protocol = "TCP"
+    }
+
+    secure_environment_variables = {
+      "MONGO_INITDB_ROOT_USERNAME" = var.mongodb_adm_username
+      "MONGO_INITDB_ROOT_PASSWORD" = var.mongodb_adm_password
     }
   }
 }

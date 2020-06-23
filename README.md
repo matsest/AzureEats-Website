@@ -24,6 +24,9 @@
 | container\_group\_name | name of app service | `string` | n/a | yes |
 | db\_name | name for the products db | `string` | n/a | yes |
 | location | location of resource group | `string` | n/a | yes |
+| mongodb\_adm\_password | password for the mongodb administrator | `string` | n/a | yes |
+| mongodb\_adm\_username | username for the mongodb administrator | `string` | n/a | yes |
+| mongodb\_port | mongodb port | `number` | `27017` | no |
 | rg\_name | name of resource group | `string` | n/a | yes |
 | sql\_adm\_password | password for the sql administrator | `string` | n/a | yes |
 | sql\_adm\_username | username for the sql administrator | `string` | n/a | yes |

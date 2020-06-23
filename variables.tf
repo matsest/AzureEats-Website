@@ -32,3 +32,19 @@ variable "container_group_name" {
   type        = string
   description = "name of app service"
 }
+
+variable "mongodb_port" {
+  type        = number
+  description = "mongodb port"
+  default     = 27017
+}
+
+variable "mongodb_adm_username" {
+  type        = string
+  description = "username for the mongodb administrator"
+}
+
+variable "mongodb_adm_password" {
+  type        = string
+  description = "password for the mongodb administrator"
+}
