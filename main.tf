@@ -15,7 +15,7 @@ resource "azurerm_app_service_plan" "website" {
 }
 
 resource "azurerm_app_service" "website" {
-  name                = var.app_service_name
+  name                = "${var.app_service_name}-with-db"
   location            = azurerm_resource_group.app.location
   resource_group_name = azurerm_resource_group.app.name
   app_service_plan_id = azurerm_app_service_plan.website.id
