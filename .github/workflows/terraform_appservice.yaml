@@ -4,7 +4,7 @@ name: Web Terraform AppService
 on:
     push:
         branches:
-            - master
+            - challenge-01
 
 jobs:
     terraform:
