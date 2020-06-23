@@ -26,7 +26,7 @@ resource "azurerm_app_service" "website" {
     "WEBSITE_NODE_DEFAULT_VERSION" = "10.15.2",
     "ApiUrl"                       = "/api/v1",
     "ApiUrlShoppingCart"           = "/api/v1",
-    "MongoConnectionString"        = format("mongodb://%s:%s", azurerm_container_group.app.ip_address, [for port in azurerm_container_group.app.container[0].ports : port if port != ""])
+    "MongoConnectionString"        = format("mongodb://%s:%s", azurerm_container_group.app.ip_address, azurerm_container_group.app.container[0].ports[*].port[0])
     "SqlConnectionString"          = module.sql_database.connection_string
     "productImagesUrl"             = "https://raw.githubusercontent.com/microsoft/TailwindTraders-Backend/master/Deploy/tailwindtraders-images/product-detail",
     "Personalizer__ApiKey"         = "",
