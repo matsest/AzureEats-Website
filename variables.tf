@@ -13,7 +13,22 @@ variable "app_service_name" {
   description = "name of app service"
 }
 
-variable "app_settings" {
-  type        = map(string)
-  description = "object containing app settings for the app service"
+variable "db_name" {
+  type        = string
+  description = "name for the products db"
+}
+
+variable "sql_adm_username" {
+  type        = string
+  description = "username for the sql administrator"
+}
+
+variable "sql_adm_password" {
+  type        = string
+  description = "password for the sql administrator"
+}
+
+variable "container_group_name" {
+  type        = string
+  description = "name of app service"
 }

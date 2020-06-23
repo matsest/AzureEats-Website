@@ -1,6 +1,6 @@
-# Challenge 01
+# Challenge 02
 
-> https://github.com/Terraform-On-Azure-Workshop/terraform-azure-hashiconf2020/blob/main/challenges/challenge1/Readme.md
+> https://github.com/Terraform-On-Azure-Workshop/terraform-azure-hashiconf2020/blob/main/challenges/challenge2/Readme.md
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -21,9 +21,12 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | app\_service\_name | name of app service | `string` | n/a | yes |
-| app\_settings | object containing app settings for the app service | `map(string)` | n/a | yes |
+| container\_group\_name | name of app service | `string` | n/a | yes |
+| db\_name | name for the products db | `string` | n/a | yes |
 | location | location of resource group | `string` | n/a | yes |
 | rg\_name | name of resource group | `string` | n/a | yes |
+| sql\_adm\_password | password for the sql administrator | `string` | n/a | yes |
+| sql\_adm\_username | username for the sql administrator | `string` | n/a | yes |
 
 ## Outputs
 

@@ -7,7 +7,7 @@ terraform {
     resource_group_name  = "tfstate-rg"
     storage_account_name = "tfstatesamats"
     container_name       = "hashiconf2020"
-    key                  = "challenge-1.terraform.tfstate"
+    key                  = "challenge-2.terraform.tfstate"
   }
 }
 
