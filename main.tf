@@ -37,7 +37,7 @@ resource "azurerm_app_service" "website" {
 module "sql_database" {
   source              = "Azure/database/azurerm"
   version             = "1.1.0"
-  resource_group_name = azurerm_resource_group.app.name
+  resource_group_name = "${azurerm_resource_group.app.name}-db"
   location            = azurerm_resource_group.app.location
   db_name             = var.db_name
   sql_admin_username  = var.sql_adm_username
