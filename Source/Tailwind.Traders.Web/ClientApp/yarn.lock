@@ -2196,10 +2196,12 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-a11y-dialog@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/a11y-dialog/-/a11y-dialog-5.2.0.tgz#bc3f9ccb7154a840bffd61b9385edbd093f7f209"
-  integrity sha512-vymlarVdoDKNwQPq513D5IANZu7fdOiWjQJG0FuEFI77RfJUGrxpfI6puwXy7hxKmVTSf4bNq6ZgCb+EikIl8g==
+a11y-dialog@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/a11y-dialog/-/a11y-dialog-6.0.0.tgz#bf4dce3b99acd4726033a5b12315e10dd822bca1"
+  integrity sha512-ZZaFbcq6V9/+BBIgb9uxeRY91Lu/mbjncZTHmUr/TjWr1accf9SRcLwxTrx/G4rK5xMUzgsx2Fkzh+P8bEvLyw==
+  dependencies:
+    focusable-selectors "^0.2.0"
 
 abab@^2.0.0:
   version "2.0.3"
@@ -5132,6 +5134,11 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
+
+focusable-selectors@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/focusable-selectors/-/focusable-selectors-0.2.0.tgz#ae8aeb730e8e70bcd2572542fcdba3f89548922a"
+  integrity sha512-v6a8tiRtsiO0TvRDtrnpzhvUDb7L52MM8SrcO+pzC5azbekuvMLjijbyWeZ30efBGhVdgMv5zn0z7Y1bLkjc0w==
 
 follow-redirects@1.5.10:
   version "1.5.10"
@@ -9459,12 +9466,12 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-a11y-dialog@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/react-a11y-dialog/-/react-a11y-dialog-4.2.0.tgz#218c78d7f01e2abbb71d7acabc55ce1e043a5bdc"
-  integrity sha512-D2ja8oVuQ1FcfRmVXmaZVNVT51hOBkjX/7f0anBXfQBBX/gS9LCF8lsUMj4vJYjcMpeNwYHSq/ZRlsg01abA5g==
+react-a11y-dialog@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-a11y-dialog/-/react-a11y-dialog-5.1.0.tgz#178d8ce85a4b07855cc4bd5e2bb0bb76a3f77132"
+  integrity sha512-Ve1IKAQujmZsQ0lCl6kv2hbqp+M03sPVb3qsW1rWTZGE9xcQ3xcR8spxQk8qTMfVN7WRVYpWPrQDfbq9fjSGuQ==
   dependencies:
-    a11y-dialog "^5.2.0"
+    a11y-dialog "^6.0.0"
 
 react-app-polyfill@^1.0.6:
   version "1.0.6"
