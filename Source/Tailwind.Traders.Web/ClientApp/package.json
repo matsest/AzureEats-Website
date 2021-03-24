@@ -5,7 +5,7 @@
   "dependencies": {
     "@azure/cosmos": "^2.0.5",
     "@microsoft/applicationinsights-react-js": "^2.2.0",
-    "@microsoft/applicationinsights-web": "^2.5.7",
+    "@microsoft/applicationinsights-web": "^2.6.0",
     "axios": "^0.18.1",
     "dotenv": "^8.2.0",
     "history": "^4.9.0",
