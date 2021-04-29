@@ -1,0 +1,91 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/Source/Tailwind.Traders.Web/ClientApp"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: react-a11y-dialog
+    versions:
+    - 5.0.0
+    - 5.1.0
+    - 5.1.1
+    - 6.0.0
+    - 6.1.0
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: msal
+    versions:
+    - 1.4.4
+    - 1.4.5
+    - 1.4.6
+    - 1.4.8
+    - 1.4.9
+  - dependency-name: "@microsoft/applicationinsights-web"
+    versions:
+    - 2.5.11
+    - 2.6.0
+    - 2.6.1
+  - dependency-name: react-redux
+    versions:
+    - 7.2.2
+    - 7.2.3
+  - dependency-name: react-scripts
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: react-scroll
+    versions:
+    - 1.8.1
+- package-ecosystem: nuget
+  directory: "/Source/Tailwind.Traders.Web"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: CsvHelper
+    versions:
+    - 21.3.1
+    - 22.0.0
+    - 22.1.0
+    - 22.1.1
+    - 22.1.2
+    - 23.0.0
+    - 24.0.0
+    - 24.0.1
+    - 25.0.0
+    - 26.0.0
+    - 26.0.1
+    - 26.1.0
+    - 27.0.0
+    - 27.0.1
+  - dependency-name: MongoDB.Driver
+    versions:
+    - 2.11.6
+    - 2.12.0
+    - 2.12.1
+  - dependency-name: Microsoft.AspNetCore.SpaServices.Extensions
+    versions:
+    - 5.0.2
+    - 5.0.3
+    - 5.0.4
+  - dependency-name: Microsoft.ML.OnnxRuntime
+    versions:
+    - 1.6.0
+  - dependency-name: Dapper
+    versions:
+    - 2.0.78
+  - dependency-name: SixLabors.ImageSharp
+    versions:
+    - 1.0.2
+  - dependency-name: Microsoft.ApplicationInsights.AspNetCore
+    versions:
+    - 2.16.0
+  - dependency-name: Microsoft.Azure.Storage.Blob
+    versions:
+    - 11.2.2
